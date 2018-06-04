@@ -3,7 +3,18 @@ package com.ianl;
 public class Main {
 
     public static void main(String[] args) {
+        calcFeetAndInchesToCentimeters(0, 12); // pass
+        calcFeetAndInchesToCentimeters(-1, 12); // fail
+        calcFeetAndInchesToCentimeters(0, 13); // fail
+        calcFeetAndInchesToCentimeters(24, 12); // pass
+    }
 
+    public static int calcFeetAndInchesToCentimeters(double feet, double inches) {
+        if ((feet >= 0) && (inches >= 0 && inches <=12)) {
+            System.out.println("Validated with: "+feet+" ft "+inches+" in ");
+            return 0;
+        }
+        return -1;
     }
 }
 
